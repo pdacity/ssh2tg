@@ -1,6 +1,6 @@
 # Телеграм–уведомления об ssh–авторизации на сервере через своего tg–бота
 
-![](https://git.vifid.ru/infra/ssh2tg/-/raw/master/ssh2tg.gif)
+![](https://raw.githubusercontent.com/pdacity/ssh2tg/master/ssh2tg.gif)
 
 
 Создание бота через BotFather — процесс очень простой. Да и, наверняка, бот у вас уже есть.
