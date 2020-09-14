@@ -8,12 +8,14 @@
 В двух словах: Создали бота. Записали на бумажку ключ бота: bot12345678:ABCDefDHIjkLMnoPqrstuVW Создали канал/группу. Обозвали его/её как–нить публично, типа My_Super_channel. Добавили бота в канал.
 
 Узнаем ID канала/группы:
+```
 curl "https://api.telegram.org/bot12345678:ABCDefDHIjkLMnoPqrstuVW/sendMessage?chat_id=@My_Super_channel&text=test123"
+```
 
 Ищем в ответе значение chat":{"id":–9876543210...
 (в этот момент, кстати, должно упасть сообщение test123 в вашу телегу. Если упало, значит всё окей). Если надо, делаем канал/группу приватными.
 
-Создаем файл /usr/local/bin/ssh2tg.sh:
+Создаем файл `/usr/local/bin/ssh2tg.sh`
 
 ```
 #!/bin/bash
