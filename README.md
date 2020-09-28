@@ -15,16 +15,20 @@ curl "https://api.telegram.org/bot12345678:ABCDefDHIjkLMnoPqrstuVW/sendMessage?c
 Ищем в ответе значение chat":{"id":–9876543210...
 (в этот момент, кстати, должно упасть сообщение test123 в вашу телегу. Если упало, значит всё окей). Если надо, делаем канал/группу приватными.
 
+Для избавления в оповещении строки типа '"readme": "https://ipinfo.io/missingauth"' можно зарегистрировать бесплатный аккаунт на  ipinfo.io, сгенерировать персональный токен и добавить его в переменную 'TOKEN'. 
+
+
 Создаем файл `/usr/local/bin/ssh2tg.sh`
 
 ```
 #!/bin/bash
+TOKEN=8888888888
 KEY="12345678:ABCDefDHIjkLMnoPqrstuVW"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 TARGET="айди_контакта/группы/канала_куда_отправлять_уведомления" #в нашем случае это –9876543210, именно с минусом.
 DATE1="$(date "+%H:%M:%S")"
 DATE2="$(date "+%d %B %Y")"
-GEO="$(curl ipinfo.io/$PAM_RHOST)"
+GEO="$(curl ipinfo.io/?token=$TOKEN&$PAM_RHOST)"
 TEXT="*$PAM_USER* залогинился на *$HOSTNAME*
 Время: $DATE1
 Дата: $DATE2
