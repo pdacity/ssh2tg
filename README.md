@@ -20,4 +20,8 @@ curl "https://api.telegram.org/bot12345678:ABCDefDHIjkLMnoPqrstuVW/sendMessage?c
 session optional pam_exec.so type=open_session seteuid /usr/local/bin/ssh2tg.sh
 ```
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=pdacity/ssh2tg&type=Timeline)](https://star-history.com/#pdacity/ssh2tg&Timeline)
+
 
